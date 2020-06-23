@@ -40,24 +40,35 @@ cppFunction('DataFrame createTrajectory(int n, double x0, double y0,
             ')
 
 a=-1.24458046630025
-b=-1.25191834103316 
-c=-1.81590817030519 
+b=-1.25191834103316
+c=-1.81590817030519
 d=-1.90866735205054
 
-df=createTrajectory(10, 0, 0, a, b, c, d)
+df=createTrajectory(30000, 0, 0, a, b, c, d)
 
 # png("Clifford.png", units="px", width=1600, height=1600, res=300)
 # ggplot(df, aes(x, y)) + geom_point(color="black", shape=46, alpha=.01) + opt
-# dev.off()
+dev.off()
 
 p <- ggplot(df, aes(x, y)) + 
-  geom_point(color="black", shape=46, alpha=.01) + 
-  opt
+  geom_point(color="black", shape=46, alpha=.5) + 
+  theme_icon()
 p
 
 p.sticker <- sticker(
   p, package=" ", p_size=3, 
-  s_x=1, s_y=1, s_width=1.4, s_height=1.4,
+  s_x=1, s_y=1, s_width=1.7, s_height=1.7,
   h_color = "black", h_fill = "white",
   filename="img/boxplot-icon-sticker.png"
 )
+
+p.sticker <- sticker(
+  p, package="Fronkonstin", 
+  p_size=8, p_color = "black", p_family = "serif", 
+  p_y = 1.6, 
+  s_x=1, s_y=0.85, s_width=1.4, s_height=1.4,
+  h_color = "black", h_fill = "white",
+  filename="img/boxplot-icon-sticker.png"
+)
+
+p.sticker
