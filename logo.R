@@ -3,8 +3,6 @@ library(magick)
 library(cowplot)
 library(hexSticker)
 
-setwd("~/Projects/logo")
-
 # Helper theme for ggplot icon
 theme_icon <- function () {
   theme_void() + 
@@ -17,7 +15,7 @@ theme_icon <- function () {
 }
 
 P <- ggdraw() + 
-  draw_image("~/Pictures/utils/logo (copy).png") + 
+  draw_image("img/logo (copy).png") + 
   theme_icon()
 
 
@@ -36,7 +34,7 @@ p.sticker <- sticker(
   url = "R Hispano", 
   u_size = 3.5, u_color = "#4f4f4f", 
   u_x = 0.3, u_y = 0.52,  u_angle = 330, 
-  filename="logo_hex.png"
+  filename="img/logo_hex.png"
 )
 
 p.sticker

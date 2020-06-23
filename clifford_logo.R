@@ -6,8 +6,6 @@ library(hexSticker)
 library(cowplot)
 library(hexSticker)
 
-setwd("~/Projects/logo")
-
 opt = theme(legend.position  = "none",
             panel.background = element_rect(fill="white"),
             axis.ticks       = element_blank(),
@@ -61,5 +59,5 @@ p.sticker <- sticker(
   p, package=" ", p_size=3, 
   s_x=1, s_y=1, s_width=1.4, s_height=1.4,
   h_color = "black", h_fill = "white",
-  filename="figures/boxplot-icon-sticker.png"
+  filename="img/boxplot-icon-sticker.png"
 )
